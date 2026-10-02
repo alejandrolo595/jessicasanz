@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jessica Sanz Bermúdez · Psicóloga en Madrid (Vicálvaro)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Paleta global y ajustes para las áreas seguras de móviles. */
+:root{--bg:#F4F6F3;--ink:#1B2927;--mut:#546461;--line:#D4DCD8;--acc:#2F5D57;--acc2:#B7D3CB;--soft:#E4EBE7;--card:#FBFCFB;--dk:#1F403B;--on:#F4F6F3;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121A19;--ink:#E6EDEA;--mut:#A3B3AF;--line:#2B3836;--acc:#7DB9AE;--acc2:#2F5D57;--soft:#1A2524;--card:#17211F;--dk:#0D1413;--on:#E6EDEA}}
+:root[data-theme="dark"]{--bg:#121A19;--ink:#E6EDEA;--mut:#A3B3AF;--line:#2B3836;--acc:#7DB9AE;--acc2:#2F5D57;--soft:#1A2524;--card:#17211F;--dk:#0D1413;--on:#E6EDEA}
+*{box-sizing:border-box}
+/* Tipografía, desplazamiento y contenedor centrado de toda la página. */
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 'Instrument Sans',system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:400;line-height:1.15;margin:0}
+a{color:inherit}a:focus-visible,button:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 24px}
+/* Barra de progreso, franja superior y navegación fija. */
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--acc);z-index:20}
+.top{background:var(--dk);color:var(--on);font-size:14px;padding:8px 0}
+.top .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+nav.s{box-shadow:0 6px 24px rgba(0,0,0,.08)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:68px}
+.logo{font-family:'Fraunces',Georgia,serif;font-size:21px;font-weight:600;text-decoration:none}
+.links{display:flex;gap:26px;align-items:center;font-size:15px}
+.links a{text-decoration:none;color:var(--mut);transition:color .2s}.links a:hover{color:var(--acc)}
+.btn{display:inline-block;background:var(--acc);color:var(--bg);padding:14px 26px;border-radius:99px;text-decoration:none;font-weight:600;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(47,93,87,.28)}
+.btn.o{background:none;color:var(--ink);border:1.5px solid var(--ink)}
+.links .btn{padding:10px 20px;color:var(--bg)}
+#mb{display:none;background:none;border:1px solid var(--line);color:var(--ink);padding:8px 14px;border-radius:99px;font:inherit}
+/* Portada, elementos decorativos y animaciones de entrada. */
+.hero{position:relative;padding:90px 0 80px;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;background:var(--acc2);animation:fl 14s ease-in-out infinite}
+.b1{width:420px;height:420px;right:-80px;top:-60px}.b2{width:300px;height:300px;left:-100px;bottom:-80px;animation-delay:-6s}
+@keyframes fl{50%{transform:translate(30px,40px) scale(1.12)}}
+.hg{position:relative;display:grid;grid-template-columns:1.25fr 1fr;gap:64px;align-items:center}
+.pill{display:inline-block;border:1px solid var(--line);background:var(--card);padding:6px 16px;border-radius:99px;font-size:14px;color:var(--acc);margin-bottom:22px}
+.hero h1{font-size:clamp(40px,6.2vw,70px);letter-spacing:-.025em}
+.hero p{color:var(--mut);max-width:50ch;margin:24px 0 34px;font-size:18px}
+.hero .btn{margin:0 10px 10px 0}
+.ph{position:relative;aspect-ratio:4/5;max-width:420px;margin-left:auto;border-radius:200px 200px 16px 16px;background:linear-gradient(160deg,var(--acc2),var(--soft));border:1px solid var(--line);display:grid;place-items:center;text-align:center;color:var(--mut);padding:28px;font-size:14px;animation:fl 10s ease-in-out infinite}
+.badge{position:absolute;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px;font-size:14px;box-shadow:0 12px 30px rgba(0,0,0,.1);color:var(--ink);text-align:left}
+.badge b{display:block;font-family:'Fraunces',serif;font-size:20px}
+.ba{left:-34px;bottom:70px}.bb{right:-14px;top:50px}
+.hero .in{opacity:0;transform:translateY(24px);animation:up .9s cubic-bezier(.2,.7,.2,1) forwards}
+.hero .in:nth-child(2){animation-delay:.12s}.hero .in:nth-child(3){animation-delay:.24s}.hero .in:nth-child(4){animation-delay:.36s}
+@keyframes up{to{opacity:1;transform:none}}
+section{padding:96px 0}.alt{background:var(--soft)}
+/* Encabezados de sección, cifras y presentación profesional. */
+.kick{color:var(--acc);font-weight:600;font-size:15px;margin-bottom:10px;display:block}
+h2{font-size:clamp(30px,4.2vw,46px);margin-bottom:18px;letter-spacing:-.015em}
+.lead{color:var(--mut);max-width:58ch}
+.head{text-align:center;margin-bottom:48px}
+.nums{display:grid;grid-template-columns:repeat(3,1fr);background:var(--dk);color:var(--on);border-radius:20px;margin-top:-30px;position:relative;z-index:2}
+.nums div{padding:34px 24px;text-align:center;border-right:1px solid rgba(255,255,255,.12)}.nums div:last-child{border:0}
+.nums b{display:block;font-family:'Fraunces',serif;font-size:44px;font-weight:400}
+.nums span{font-size:14px;opacity:.8}
+.about{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:center}
+.about .pic{aspect-ratio:1;border-radius:16px;background:linear-gradient(135deg,var(--acc2),var(--soft));border:1px solid var(--line);display:grid;place-items:center;color:var(--mut);font-size:14px;text-align:center;padding:0;overflow:hidden}
+.about .pic img{width:100%;height:100%;object-fit:cover}
+.cred{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;padding:0;list-style:none}
+.cred li{border:1px solid var(--line);background:var(--card);padding:7px 16px;border-radius:99px;font-size:14px}
+/* Tarjetas de servicios, iconos, trayectoria y modalidades. */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px;transition:transform .3s,box-shadow .3s,border-color .3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.09);border-color:var(--acc)}
+.ico{width:52px;height:52px;border-radius:14px;background:var(--soft);display:grid;place-items:center;margin-bottom:20px;transition:background .3s}
+.card:hover .ico{background:var(--acc2)}.ico svg{width:26px;height:26px;stroke:var(--acc);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:23px;margin-bottom:10px}.card p{margin:0;color:var(--mut);font-size:16px}
+.quote{background:var(--dk);color:var(--on);text-align:center;padding:90px 0}
+.quote blockquote{font-family:'Fraunces',serif;font-size:clamp(26px,3.8vw,42px);line-height:1.3;max-width:24em;margin:0 auto 32px}
+.two{display:grid;grid-template-columns:1fr 1.5fr;gap:64px}
+.tl{list-style:none;margin:0;padding:0 0 0 4px;border-left:2px solid var(--line)}
+.tl li{position:relative;padding:0 0 34px 30px}
+.tl li::before{content:"";position:absolute;left:-8px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 5px var(--bg)}
+.alt .tl li::before{box-shadow:0 0 0 5px var(--soft)}
+.tl time{color:var(--acc);font-weight:600;font-size:15px}.tl h3{font-size:22px;margin:2px 0 4px}.tl p{margin:0;color:var(--mut)}
+.mod{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.mod .card{padding:40px}.mod .card h3{font-size:28px}
+.help{columns:2;column-gap:48px;padding:0;list-style:none;margin:0}
+.help li{break-inside:avoid;padding:12px 0 12px 34px;border-bottom:1px solid var(--line);position:relative}
+.help li::before{content:"";position:absolute;left:6px;top:20px;width:10px;height:6px;border-left:2px solid var(--acc);border-bottom:2px solid var(--acc);transform:rotate(-45deg)}
+/* Carrusel de opiniones y controles de navegación. */
+.tc{position:relative;max-width:760px;margin:0 auto;text-align:center;min-height:260px}
+.t{position:absolute;inset:0;opacity:0;transform:translateX(30px);transition:all .6s;pointer-events:none}
+.t.on{opacity:1;transform:none;pointer-events:auto;position:relative}
+.t p{font-family:'Fraunces',serif;font-size:clamp(20px,2.6vw,27px);line-height:1.45;margin:0 0 20px}
+.t span{color:var(--mut);font-size:15px}.stars{color:#C9A24A;letter-spacing:4px;margin-bottom:16px}
+.dots{display:flex;justify-content:center;gap:10px;margin-top:30px}
+.dots button{width:11px;height:11px;border-radius:50%;border:0;background:var(--line);padding:0;cursor:pointer;transition:all .3s}
+.dots button.on{background:var(--acc);width:30px;border-radius:9px}
+.faq details{border-bottom:1px solid var(--line);padding:6px 0}
+.faq summary{cursor:pointer;list-style:none;font-family:'Fraunces',serif;font-size:21px;padding:18px 40px 18px 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:6px;top:14px;font-size:30px;color:var(--acc);transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin:0 0 18px;color:var(--mut);max-width:70ch;animation:up .5s both}
+/* Llamada a la acción, contacto, mapa y pie de página. */
+.cta{background:linear-gradient(120deg,var(--dk),var(--acc));color:var(--on);border-radius:28px;padding:64px 40px;text-align:center}
+.cta h2{max-width:18em;margin:0 auto 16px}.cta p{max-width:48ch;margin:0 auto 30px;opacity:.88}
+.cta .btn{background:var(--on);color:var(--dk)}
+.ct{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.ct dt{color:var(--mut);font-size:14px;margin-top:20px}.ct dd{margin:0;font-size:19px}
+.map{border-radius:18px;border:1px solid var(--line);background:var(--soft);min-height:300px;display:grid;place-items:center;color:var(--mut);text-align:center;padding:20px;font-size:14px}
+footer{background:var(--dk);color:var(--on);padding:44px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;opacity:.85}
+.tt{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));width:46px;height:46px;border-radius:50%;border:0;background:var(--acc);color:var(--bg);font-size:20px;cursor:pointer;opacity:0;transform:translateY(20px);transition:.3s;z-index:9}
+.tt.v{opacity:1;transform:none}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}.rv.v{opacity:1;transform:none}
+/* Adaptación a móvil y respeto a la preferencia de movimiento reducido. */
+@media(max-width:860px){.hg,.about,.two,.ct,.mod{grid-template-columns:1fr;gap:36px}.help{columns:1}.nums{grid-template-columns:1fr}.nums div{border-right:0;border-bottom:1px solid rgba(255,255,255,.12)}.hero{padding:56px 0}.ph{margin:0 auto}.ba{left:-8px}.bb{right:-8px}section{padding:64px 0}
+#mb{display:block}.links{display:none;position:absolute;top:68px;left:0;right:0;background:var(--bg);flex-direction:column;padding:20px 24px;border-bottom:1px solid var(--line);align-items:flex-start}.links.o{display:flex}.top span:last-child{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.hero .in{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<!-- Indicador de progreso de lectura. -->
+<div id="bar"></div>
+<!-- Datos de ubicación y acreditación. -->
+<div class="top"><div class="wrap"><span>Calle Marmolina, Vicálvaro · 28032 Madrid</span><span>Psicóloga sanitaria · Nº col. M-32962</span></div></div>
+<!-- Navegación principal con menú adaptable a móviles. -->
+<nav id="nav"><div class="wrap"><a class="logo" href="#inicio">Jessica Sanz Bermúdez</a>
+<button id="mb" aria-label="Abrir menú">Menú</button>
+<div class="links" id="lk"><a href="#sobre-mi">Sobre mí</a><a href="#servicios">Servicios</a><a href="#trayectoria">Información</a><a href="#opiniones">Opiniones</a><a href="#faq">Preguntas</a><a class="btn" href="#contacto">Pedir cita</a></div></div></nav>
+
+<main id="inicio">
+<!-- Presentación principal y acceso a servicios/contacto. -->
+<header class="hero"><div class="blob b1"></div><div class="blob b2"></div>
+<div class="wrap hg"><div>
+<span class="pill in">Psicóloga en Madrid · Vicálvaro</span>
+<h1 class="in">Recupera tu calma, recupera tu bienestar</h1>
+<p class="in">Soy Jessica, psicóloga sanitaria. Te acompaño en terapia individual, cognitivo-conductual y sistémica, con un trato cercano y estrategias claras desde la primera sesión.</p>
+<div class="in"><a class="btn" href="#contacto">Pedir cita</a><a class="btn o" href="#servicios">Ver servicios</a></div></div>
+<div class="ph" role="img" aria-label="Fotografía profesional">Aquí irá tu fotografía profesional<div class="badge ba"><b>M-32962</b>colegiada</div><div class="badge bb"><b>5,0 ★</b>4 opiniones verificadas</div></div></div></header>
+
+<!-- Indicadores destacados. -->
+<div class="wrap"><div class="nums rv"><div><b data-n="5">0</b><span>valoración media sobre 5</span></div><div><b data-n="4">0</b><span>opiniones verificadas</span></div><div><b data-n="10">0</b><span>servicios disponibles</span></div></div></div>
+
+<!-- Perfil profesional y credenciales. -->
+<section id="sobre-mi"><div class="wrap about">
+<div class="pic rv"><img src="Fotopersonal.jpeg" alt="Jessica Sanz Bermúdez en consulta"></div>
+<div class="rv"><span class="kick">Sobre mí</span><h2>Psicología cercana, con método</h2><p class="lead">Soy Jessica Sanz Bermúdez, psicóloga sanitaria colegiada en Madrid. Atiendo a adultos, adolescentes y niños desde un enfoque cognitivo-conductual y sistémico.</p><p class="lead">En cada sesión te explico qué trabajamos y por qué, para que salgas con estrategias concretas y con la seguridad de un espacio donde sentirte cómodo.</p><ul class="cred"><li>Colegiada M-32962</li><li>Terapia cognitivo-conductual</li><li>Terapia sistémica</li><li>Infantojuvenil</li><li>Adicciones</li></ul></div></div></section>
+
+<!-- Catálogo de servicios. -->
+<section id="servicios" class="alt"><div class="wrap">
+<div class="head rv"><span class="kick">Servicios</span><h2>¿En qué puedo ayudarte?</h2><p class="lead">Consulta de psicología sanitaria para adultos, adolescentes y niños, en Madrid y online.</p></div>
+<div class="grid"><div class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 15c1 1.3 2.4 2 4 2s3-.7 4-2M9 9.5h.01M15 9.5h.01"/></svg></div><h3>Terapia individual</h3><p>Acompañamiento personal para ansiedad, estrés, baja autoestima y estado de ánimo.</p></div><div class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="4"/></svg></div><h3>Terapia cognitivo-conductual</h3><p>Herramientas prácticas para cambiar pensamientos y conductas que te hacen sufrir.</p></div><div class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.5c3 0 6 2 6 5.5"/></svg></div><h3>Terapia sistémica</h3><p>Trabajo sobre las relaciones y el entorno familiar y de pareja.</p></div><div class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg></div><h3>Infantojuvenil</h3><p>Terapia psicológica para niños y adolescentes.</p></div><div class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="9"/></svg></div><h3>Tratamiento de adicciones</h3><p>Apoyo psicológico en procesos de recuperación y dependencia.</p></div><div class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg></div><h3>Terapia online</h3><p>Sesiones por videollamada, sin desplazamientos.</p></div></div></div></section>
+
+<!-- Cita destacada y enlace a contacto. -->
+<div class="quote"><div class="wrap rv"><blockquote>«Pedir ayuda no es debilidad: es el primer paso de cualquier cambio.»</blockquote><a class="btn" href="#contacto" style="background:var(--on);color:var(--dk)">Empezamos juntos</a></div></div>
+
+<!-- Información de consulta, modalidades y motivos de consulta. -->
+<section id="trayectoria"><div class="wrap two">
+<div class="rv"><span class="kick">Información profesional</span><h2>Datos de la consulta</h2><p class="lead">Todo lo que necesitas saber antes de tu primera cita.</p></div><ol class="tl rv"><li><time>Colegiación</time><h3>Psicóloga colegiada · Nº M-32962</h3><p>Puedes comprobarla en el Colegio Oficial de Psicología.</p></li><li><time>Especialidad</time><h3>Psicología sanitaria</h3><p>Primera visita y consulta de psicología sanitaria.</p></li><li><time>Enfoques</time><h3>Cognitivo-conductual y sistémico</h3><p>Terapia individual, infantojuvenil y de adicciones.</p></li><li><time>Ubicación</time><h3>Calle Marmolina, Vicálvaro</h3><p>28032 Madrid.</p></li><li><time>Pacientes</time><h3>Atención privada</h3><p>No se trabaja con aseguradoras.</p></li></ol></div></section>
+
+<section class="alt"><div class="wrap"><div class="head rv"><span class="kick">Modalidades</span><h2>Presencial u online, tú eliges</h2></div>
+<div class="mod"><div class="card rv"><h3>Terapia presencial</h3><p>En mi consulta de Vicálvaro, un espacio tranquilo y cómodo. Calle Marmolina, 28032 Madrid.</p></div>
+<div class="card rv"><h3>Terapia online</h3><p>Por videollamada, desde donde estés y sin desplazamientos.</p></div></div></div></section>
+
+<section><div class="wrap"><div class="head rv"><span class="kick">Quiero ayudarte</span><h2>Quizá te reconozcas aquí</h2></div>
+<ul class="help rv"><li>Sientes ansiedad o estrés casi todos los días.</li><li>Te cuesta dormir por los pensamientos.</li><li>Tienes miedos o ataques de pánico.</li><li>Notas baja autoestima o dependencia emocional.</li><li>Atraviesas un duelo o una crisis de pareja.</li><li>Tu hijo o hija adolescente lo está pasando mal.</li><li>Pensamientos o rituales que no puedes controlar.</li><li>Quieres dejar atrás una adicción.</li></ul></div></section>
+
+<!-- Opiniones de pacientes. -->
+<section id="opiniones" class="alt"><div class="wrap"><div class="head rv" style="text-align:center"><span class="kick">Opiniones</span><h2>Lo que dicen mis pacientes</h2></div>
+<div class="tc rv" id="tc"><div class="t on"><div class="stars">★★★★★</div><p>Una madre cuenta que, tras pasar por varios psicólogos, Jessica fue la única que ayudó de verdad a su hija y a ella.</p><span>D.C. · Consulta online · febrero 2025</span></div><div class="t"><div class="stars">★★★★★</div><p>Lleva cinco años en terapia con ella y destaca el ambiente de intimidad y comprensión de las sesiones.</p><span>Matías · Terapia individual · febrero 2025</span></div><div class="t"><div class="stars">★★★★★</div><p>Valora su empatía y cómo sabe escuchar y orientar durante la terapia.</p><span>Greco · Terapia sistémica · enero 2025</span></div><div class="t"><div class="stars">★★★★★</div><p>Agradece su disponibilidad y dedicación, y que desde el primer día le explicó el trabajo con estrategias concretas.</p><span>Alba Ruíz · enero 2025</span></div></div>
+<div class="dots" id="dots"></div>
+<p style="text-align:center;color:var(--mut);font-size:13px;margin-top:28px">Opiniones verificadas de pacientes · <a href="https://www.doctoralia.es/jessica-sanz-bermudez/psicologo/madrid#profile-reviews" target="_blank" rel="noopener" style="color:var(--acc)">leerlas completas en Doctoralia</a></p></div></section>
+
+<!-- Preguntas frecuentes. -->
+<section id="faq"><div class="wrap two"><div class="rv"><span class="kick">Preguntas frecuentes</span><h2>Resolvemos tus dudas</h2></div>
+<div class="faq rv"><details><summary>¿Qué servicios ofreces?</summary><p>Primera visita, consulta de psicología sanitaria, terapia individual, cognitivo-conductual, sistémica, infantojuvenil, tratamiento de adicciones y terapia online.</p></details><details><summary>¿Dónde está la consulta?</summary><p>En la calle Marmolina, en el distrito de Vicálvaro (28032 Madrid).</p></details><details><summary>¿Trabajas con aseguradoras?</summary><p>No. La consulta atiende únicamente a pacientes privados.</p></details><details><summary>¿Cómo reservo una cita?</summary><p>Contacta directamente con la consulta para conocer la disponibilidad y concertar tu primera visita.</p></details><details><summary>¿A quién atiendes?</summary><p>A adultos, adolescentes y niños, tanto en terapia individual como con enfoque sistémico.</p></details></div></div></section>
+
+<!-- Llamada final a reservar y datos de contacto. -->
+<section class="alt"><div class="wrap"><div class="cta rv"><h2>Dar el primer paso es lo más difícil. Yo te acompaño.</h2><p>Reserva tu primera sesión y empezamos a trabajar a tu ritmo.</p><a class="btn" href="#contacto">Reservar primera cita</a></div></div></section>
+
+<section id="contacto"><div class="wrap ct">
+<div class="rv"><span class="kick">Contacto</span><h2>Hablemos</h2><p class="lead">Contacta con la consulta para conocer la disponibilidad y reservar tu primera cita.</p>
+<dl><dt>Consulta</dt><dd>Calle Marmolina, Vicálvaro · 28032 Madrid</dd><dt>Colegiación</dt><dd>Nº M-32962</dd><dt>Pacientes</dt><dd>Atención privada, sin aseguradoras</dd><dt>Perfil profesional</dt><dd><a href="https://www.doctoralia.es/jessica-sanz-bermudez/psicologo/madrid" target="_blank" rel="noopener">Ver en Doctoralia</a></dd></dl></div>
+<div class="map rv"><svg viewBox="0 0 600 440" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Plano esquemático de la ubicación de la consulta en Vicálvaro, Madrid"><rect width="600" height="440" fill="var(--soft)"/><g transform="rotate(-12 300 220)" fill="var(--card)" stroke="var(--line)" stroke-width="1"><rect x="-72" y="-72" width="94" height="74" rx="8"/><rect x="-72" y="18" width="94" height="74" rx="8"/><rect x="-72" y="108" width="94" height="74" rx="8"/><rect x="-72" y="198" width="94" height="74" rx="8"/><rect x="-72" y="288" width="94" height="74" rx="8"/><rect x="-72" y="378" width="94" height="74" rx="8"/><rect x="-72" y="468" width="94" height="74" rx="8"/><rect x="-72" y="558" width="94" height="74" rx="8"/><rect x="38" y="-72" width="94" height="74" rx="8"/><rect x="38" y="18" width="94" height="74" rx="8"/><rect x="38" y="108" width="94" height="74" rx="8"/><rect x="38" y="198" width="94" height="74" rx="8"/><rect x="38" y="288" width="94" height="74" rx="8"/><rect x="38" y="378" width="94" height="74" rx="8"/><rect x="38" y="468" width="94" height="74" rx="8"/><rect x="38" y="558" width="94" height="74" rx="8"/><rect x="148" y="-72" width="94" height="74" rx="8"/><rect x="148" y="18" width="94" height="74" rx="8"/><rect x="148" y="108" width="94" height="74" rx="8"/><rect x="148" y="198" width="94" height="74" rx="8"/><rect x="148" y="288" width="94" height="74" rx="8"/><rect x="148" y="378" width="94" height="74" rx="8"/><rect x="148" y="468" width="94" height="74" rx="8"/><rect x="148" y="558" width="94" height="74" rx="8"/><rect x="258" y="-72" width="94" height="74" rx="8"/><rect x="258" y="18" width="94" height="74" rx="8"/><rect x="258" y="108" width="94" height="74" rx="8"/><rect x="258" y="198" width="94" height="74" rx="8"/><rect x="258" y="288" width="94" height="74" rx="8"/><rect x="258" y="378" width="94" height="74" rx="8"/><rect x="258" y="468" width="94" height="74" rx="8"/><rect x="258" y="558" width="94" height="74" rx="8"/><rect x="368" y="-72" width="94" height="74" rx="8"/><rect x="368" y="18" width="94" height="74" rx="8"/><rect x="368" y="108" width="94" height="74" rx="8"/><rect x="368" y="198" width="94" height="74" rx="8"/><rect x="368" y="288" width="94" height="74" rx="8"/><rect x="368" y="378" width="94" height="74" rx="8"/><rect x="368" y="468" width="94" height="74" rx="8"/><rect x="368" y="558" width="94" height="74" rx="8"/><rect x="478" y="-72" width="94" height="74" rx="8"/><rect x="478" y="18" width="94" height="74" rx="8"/><rect x="478" y="108" width="94" height="74" rx="8"/><rect x="478" y="198" width="94" height="74" rx="8"/><rect x="478" y="288" width="94" height="74" rx="8"/><rect x="478" y="378" width="94" height="74" rx="8"/><rect x="478" y="468" width="94" height="74" rx="8"/><rect x="478" y="558" width="94" height="74" rx="8"/><rect x="588" y="-72" width="94" height="74" rx="8"/><rect x="588" y="18" width="94" height="74" rx="8"/><rect x="588" y="108" width="94" height="74" rx="8"/><rect x="588" y="198" width="94" height="74" rx="8"/><rect x="588" y="288" width="94" height="74" rx="8"/><rect x="588" y="378" width="94" height="74" rx="8"/><rect x="588" y="468" width="94" height="74" rx="8"/><rect x="588" y="558" width="94" height="74" rx="8"/><rect x="698" y="-72" width="94" height="74" rx="8"/><rect x="698" y="18" width="94" height="74" rx="8"/><rect x="698" y="108" width="94" height="74" rx="8"/><rect x="698" y="198" width="94" height="74" rx="8"/><rect x="698" y="288" width="94" height="74" rx="8"/><rect x="698" y="378" width="94" height="74" rx="8"/><rect x="698" y="468" width="94" height="74" rx="8"/><rect x="698" y="558" width="94" height="74" rx="8"/></g><ellipse cx="480" cy="110" rx="90" ry="55" fill="var(--acc2)" opacity=".55"/><text x="480" y="114" text-anchor="middle" font-size="12" fill="var(--mut)" font-family="Instrument Sans,sans-serif">Zona verde</text><path d="M-20 330 C 150 290, 380 380, 640 300" fill="none" stroke="var(--line)" stroke-width="30" stroke-linecap="round"/><path d="M-20 330 C 150 290, 380 380, 640 300" fill="none" stroke="var(--card)" stroke-width="24" stroke-linecap="round"/><path d="M-30 250 L 640 160" stroke="var(--acc)" stroke-width="6" stroke-linecap="round" opacity=".55" fill="none"/><text x="90" y="226" font-size="13" fill="var(--acc)" font-weight="600" font-family="Instrument Sans,sans-serif" transform="rotate(-6.4 90 226)">Calle Marmolina</text><text x="300" y="400" text-anchor="middle" font-size="15" fill="var(--mut)" font-family="Fraunces,Georgia,serif">Vicálvaro</text><circle class="pl" cx="300" cy="206" r="14" fill="var(--acc)"/><g class="pin"><path d="M300 236c-15-17-24-28-24-42a24 24 0 0 1 48 0c0 14-9 25-24 42z" fill="var(--acc)"/><circle cx="300" cy="194" r="9" fill="var(--bg)"/></g></svg><div class="mc"><div><b>Consulta de Jessica Sanz</b><span>Calle Marmolina, Vicálvaro · 28032 Madrid</span></div><a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=40.3975792,-3.6071398" target="_blank" rel="noopener">Cómo llegar</a></div></div></div></section>
+</main>
+<footer><div class="wrap"><span>© 2026 Jessica Sanz Bermúdez · Psicóloga General Sanitaria · Nº col. M-32962</span><span>Aviso legal · Privacidad · Cookies</span></div></footer>
+<button class="tt" id="tt" aria-label="Volver arriba">↑</button>
+<!-- Inicializa animaciones, contadores, menú, progreso y carrusel. -->
+<script>
+(function(){
+var $=function(s){return document.querySelector(s)};
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('v');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%3)*90+'ms';io.observe(el)});
+var co=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;co.unobserve(e.target);var n=+e.target.dataset.n,t=0,s=Math.max(1,n/60);var f=setInterval(function(){t+=s;if(t>=n){t=n;clearInterval(f)}e.target.textContent=Math.round(t).toLocaleString('es-ES')+(n>100?'+':'')},25)})},{threshold:.6});
+document.querySelectorAll('[data-n]').forEach(function(el){co.observe(el)});
+var nav=$('#nav'),bar=$('#bar'),tt=$('#tt');
+function sc(){var h=document.documentElement,y=h.scrollTop;bar.style.width=(y/(h.scrollHeight-h.clientHeight)*100)+'%';nav.classList.toggle('s',y>20);tt.classList.toggle('v',y>600)}
+addEventListener('scroll',sc,{passive:true});sc();
+tt.onclick=function(){scrollTo({top:0})};
+$('#mb').onclick=function(){$('#lk').classList.toggle('o')};
+document.querySelectorAll('#lk a').forEach(function(a){a.onclick=function(){$('#lk').classList.remove('o')}});
+var ts=document.querySelectorAll('.t'),ds=$('#dots'),i=0,tm;
+ts.forEach(function(_,k){var b=document.createElement('button');b.setAttribute('aria-label','Opinión '+(k+1));b.onclick=function(){go(k);rs()};ds.appendChild(b)});
+function go(k){i=k;ts.forEach(function(t,j){t.classList.toggle('on',j===k)});ds.childNodes.forEach(function(d,j){d.classList.toggle('on',j===k)})}
+function rs(){clearInterval(tm);tm=setInterval(function(){go((i+1)%ts.length)},5500)}
+go(0);rs();
+})();
+</script>
+</body>
+</html>
